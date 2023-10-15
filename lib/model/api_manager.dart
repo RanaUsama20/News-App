@@ -6,13 +6,14 @@ import 'package:news_rana/model/SourceResponse.dart';
 import 'package:news_rana/model/api_constants.dart';
 
 class ApiManager{
-static Future<SourceResponse> getSources()async{
+static Future<SourceResponse> getSources(String categoryId)async{
 
  /// https://newsapi.org/v2/top-headlines/sources?apiKey=b5e1eab77dbc48dab1659d178506a517
 
  Uri url = Uri.https(ApiConstants.baseUrl,ApiConstants.sourceApi,
  {
-  'apiKey' : 'b5e1eab77dbc48dab1659d178506a517'
+  'apiKey' : 'b5e1eab77dbc48dab1659d178506a517',
+  'category' : categoryId
  });
  try{
   var response = await http.get(url);

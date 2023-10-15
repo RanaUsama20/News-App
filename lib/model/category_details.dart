@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:news_rana/model/SourceResponse.dart';
 import 'package:news_rana/model/api_manager.dart';
+import 'package:news_rana/model/categoryDM.dart';
 import 'package:news_rana/model/tab_container.dart';
 
 
 
 class CategoryDetails extends StatefulWidget{
   static const String routeName = 'Category-Details';
+  CategoryDM category;
+  CategoryDetails({required this.category});
 
   @override
   State<CategoryDetails> createState() => _CategoryDetailsState();
@@ -17,12 +20,8 @@ class _CategoryDetailsState extends State<CategoryDetails> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return  Scaffold(
-      appBar: AppBar(
-        title: Text('News App',
-            style: Theme.of(context).textTheme.titleLarge),
-      ),
       body:FutureBuilder<SourceResponse>(
-          future: ApiManager.getSources(),
+          future: ApiManager.getSources(widget.category.Id),
           builder: (context,snapshot){
             if (snapshot.connectionState == ConnectionState.waiting){
               return Center(child: CircularProgressIndicator(
@@ -35,7 +34,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
                   Text('Something went wrong'),
                   ElevatedButton(
                       onPressed: (){
-                        ApiManager.getSources();
+                        ApiManager.getSources(widget.category.Id);
                         setState(() {
 
                         });
