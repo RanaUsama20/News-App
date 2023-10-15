@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_rana/MyTheme.dart';
-import 'package:news_rana/model/categoryDM.dart';
-import 'package:news_rana/model/category_item.dart';
+import 'package:news_rana/Category_details/categoryDM.dart';
+import 'package:news_rana/Category_details/category_item.dart';
 
 class CategoryFragment extends StatelessWidget{
   var categoryList = CategoryDM.getCategories();

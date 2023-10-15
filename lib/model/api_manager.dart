@@ -26,14 +26,16 @@ static Future<SourceResponse> getSources(String categoryId)async{
 
 }
 
-static Future<NewsResponse> getNewsBySourceId(String sourceId)async{
+static Future<NewsResponse> getNewsBySourceId(String sourceId,int page)async{
 
 ///https://newsapi.org/v2/everything?q=bitcoin&apiKey=b5e1eab77dbc48dab1659d178506a517
 
  Uri url =Uri.https(ApiConstants.baseUrl,ApiConstants.newsApi,
  {
   'apiKey' : 'b5e1eab77dbc48dab1659d178506a517',
-  'sources' : sourceId
+  'sources' : sourceId,
+  'page': page.toString()
+
  });
 
  try{

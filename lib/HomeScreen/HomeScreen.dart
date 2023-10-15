@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:news_rana/MyTheme.dart';
-import 'package:news_rana/home_drawer.dart';
-import 'package:news_rana/model/categoryDM.dart';
-import 'package:news_rana/model/category_details.dart';
-import 'package:news_rana/model/category_fragment.dart';
-import 'package:news_rana/settingsTab.dart';
+import 'package:news_rana/HomeScreen/home_drawer.dart';
+import 'package:news_rana/Category_details/categoryDM.dart';
+import 'package:news_rana/Category_details/category_details.dart';
+import 'package:news_rana/Category_details/category_fragment.dart';
+import 'package:news_rana/Settings/settingsTab.dart';
 
 class HomeScreen extends StatefulWidget{
   static const String routeName = 'Home-screen';
