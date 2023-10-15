@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:news_rana/model/SourceResponse.dart';
 import 'package:news_rana/model/api_manager.dart';
-import 'package:news_rana/model/categoryDM.dart';
-import 'package:news_rana/model/tab_container.dart';
+import 'package:news_rana/Category_details/categoryDM.dart';
+import 'package:news_rana/HomeScreen/tab_container.dart';
 
 
 
