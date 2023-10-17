@@ -29,7 +29,7 @@ class NewsItem extends StatefulWidget{
   },
   ),
   )
-  ..loadRequest(Uri.https(ApiConstants.sourceApi));
+    ..loadRequest(Uri.parse('https://flutter.dev'));
 
   @override
   State<NewsItem> createState() => _NewsItemState();
