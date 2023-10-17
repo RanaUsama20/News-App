@@ -18,7 +18,6 @@ class CategoryDetails extends StatefulWidget{
 class _CategoryDetailsState extends State<CategoryDetails> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return  Scaffold(
       body:FutureBuilder<SourceResponse>(
           future: ApiManager.getSources(widget.category.Id),
